@@ -12,11 +12,13 @@ const useFetchProducts = (url) => {
                 setError(null);
 
                 const res = await fetch(url);
+                
                 if(!res.ok)
                     throw new Error("Api Failed");
                 const result = await res.json();
                 setData([result]);
-                setError(null);
+                console.log(result);
+                
             }catch(err){
                 setError(err.message);
         }
@@ -28,9 +30,6 @@ const useFetchProducts = (url) => {
         fetchData();
     },[url]);
 
-    useEffect(()=>{
-        console.log(data);
-    },[data]);
     return [data,isLoading,error];
 }
 

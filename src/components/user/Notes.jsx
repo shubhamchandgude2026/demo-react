@@ -6,12 +6,12 @@ const Address = () => {
   const { formik } = useContext(FormContext);
 
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, width: 300 }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, width: '100%' }}>
       <TextField
         name="notes"
-        label="notes"
+        label="Notes"
         variant="outlined"
-        value={formik.initialValues.notes}
+        value={formik.values.notes || ''}
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
         error={formik.touched.notes && Boolean(formik.errors.notes)} 

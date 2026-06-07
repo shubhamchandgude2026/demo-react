@@ -8,7 +8,7 @@ const Personaldetails = () => {
   
 
   return (
-<Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, width: 300 }}>
+<Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, width: '100%' }}>
   <TextField
     name="firstName"
     label="First Name"
